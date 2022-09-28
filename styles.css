@@ -1,0 +1,89 @@
+/* VARIABLES */
+:root {
+    --dark-color: #200C44;
+    --primary-color: #5CA7DB;
+    --secondary-color: #A0D639;
+    --light-color: #fafdf5;
+    --title-font: "Teko", Arial, Helvetica, sans-serif;
+    --text-font: "Ubuntu", Arial, Helvetica, sans-serif;
+}
+
+/* RESET */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: var(--text-font);
+    background-color: var(--dark-color);
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin: 0;
+}
+
+
+/* STYLES GENERIQUES */
+.menu {
+    background-color: var(--light-color);
+}
+
+.accueil {
+    text-align: center;
+}
+
+/* Titre principal site (page d'accueil) */
+.titleTypeMain {
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 6rem;
+    color: var(--light-color);
+}
+
+/* Titre principal de pages */
+.titleTypePage {
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+/* Sous titre */
+.titleTypeSub {
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Bloc type */
+.borderBloc {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
