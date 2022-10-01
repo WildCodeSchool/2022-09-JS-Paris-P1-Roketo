@@ -6,6 +6,9 @@
     --light-color: #fafdf5;
     --title-font: "Teko", Arial, Helvetica, sans-serif;
     --text-font: "Ubuntu", Arial, Helvetica, sans-serif;
+    --border-radius: 10px;
+    --dark-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --light-box-shadow: rgba(250, 253, 245, 0.24) 0px 3px 8px;
 }
 
 /* RESET */
@@ -78,8 +81,8 @@ li {
 /* Block type */
 .borderBlock {
     background-color: var(--light-color);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--dark-box-shadow);
 }
 
 /* Main column */
