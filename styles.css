@@ -89,5 +89,66 @@ li {
 }
 
 /*PAGE MEMBERS*/
+main {
+    
+}
+
+.titlePage {
+    color: var(--light-color);
+    font-size: 4rem;
+}
+
+section {
+    background-color: var(--light-color);
+    width: 350px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.profileCard {
+    position: relative;
+    margin-top: 220px;
+
+}
+
+.profilePic {
+    border: solid black 2px;
+    position: absolute;
+    top: -150px;
+    left: 70px;
+    height: 250px;
+}
+
+.membersName {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 130px;
+}
+
+.bio {
+    font-size: 20px;
+    margin: 30px;
+}
+
+.tagBloc {
+    height: 200px;
+    padding: 20px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.pastille {
+    position: absolute;
+    right: -20px;
+    height: 70px;
+    background-color: var(--light-color);
+}
 
 /*FIN PAGE MEMBERS*/
