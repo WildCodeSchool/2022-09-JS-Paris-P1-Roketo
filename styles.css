@@ -90,6 +90,7 @@ li {
 
 /*PAGE MEMBERS*/
 .titlePage {
+    text-align: center;
     color: var(--light-color);
     font-size: 4rem;
 }
@@ -108,10 +109,9 @@ section {
 }
 
 .profilePic {
-    border: solid black 2px;
     position: absolute;
     top: -150px;
-    left: 70px;
+    left: 80px;
     height: 250px;
 }
 
@@ -139,6 +139,8 @@ section {
     margin: 10px 10px 0 0;
     padding: 10px;
 }
+
+
 
 .pastille {
     position: absolute;
