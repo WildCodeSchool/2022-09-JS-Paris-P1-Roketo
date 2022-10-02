@@ -89,7 +89,7 @@ li {
 .mainCol {
     margin: 0 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -101,6 +101,20 @@ li {
     }
 }
 
+.mainCol2 {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .mainCol2 {
+        max-width: 1200 px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
 
 /* home page */
 .homePage__block {
@@ -127,31 +141,53 @@ li {
  fin page Hello*/
 
 /*PAGE MEMBERS*/
-.titlePage {
-    text-align: center;
-    color: var(--light-color);
-    font-size: 4rem;
+
+.profileFlex {
+    display: flex;
+    flex-direction: column;
 }
 
-section {
-    background-color: var(--light-color);
-    width: 350px;
-    margin: auto;
-    padding-bottom: 50px;
+@media screen and (min-width: 768px) {
+    .profileFlex {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
+
 
 .profileCard {
+    background-color: var(--light-color);
+    padding-bottom: 50px;
     position: relative;
-    margin-top: 220px;
-
+    margin: 220px 0 0;
+    max-width: 450px;
+    border-radius: var(--border-radius);
 }
+
+@media screen and (min-width: 768px) {
+    .profileCard {
+        flex: 0 0 600px;
+        padding-bottom: 0px;
+    }
+}
+
+
 
 .profilePic {
     position: absolute;
     top: -150px;
-    left: 80px;
+    left: 30%;
     height: 250px;
+    border-radius: var(--border-radius);
 }
+
+@media screen and (min-width: 768px) {
+    .profilePic {
+        left: 130px;
+    }
+}
+
 
 .membersName {
     text-align: center;
@@ -166,26 +202,34 @@ section {
 
 .tagBloc {
     height: 200px;
-    padding: 20px;
+    padding: 0 20px 0;
 }
 
 .tag {
     display: inline-block;
     font-size: 20px;
     font-weight: 600;
-    background-color: var(--secondary-color);
     margin: 10px 10px 0 0;
     padding: 10px;
-}
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
 
+}
 
 
 .pastille {
     position: absolute;
-    right: -20px;
-    height: 70px;
+    right: -10px;
+    height: 60px;
     background-color: var(--light-color);
+    border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 768px) {
+    .pastille {
+        right: -15px;
+        bottom: -15px;
+    }
 }
 
 /*FIN PAGE MEMBERS*/
-
