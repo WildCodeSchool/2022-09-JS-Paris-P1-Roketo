@@ -6,6 +6,9 @@
     --light-color: #fafdf5;
     --title-font: "Teko", Arial, Helvetica, sans-serif;
     --text-font: "Ubuntu", Arial, Helvetica, sans-serif;
+    --border-radius: 10px;
+    --dark-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --light-box-shadow: rgba(250, 253, 245, 0.24) 0px 3px 8px;
 }
 
 /* RESET */
@@ -26,6 +29,7 @@ body {
     line-height: 1.5;
     font-size: 1rem;
     font-weight: 400;
+    padding-bottom: 50px;
 }
 
 a {
@@ -49,13 +53,6 @@ li {
 
 
 /* STYLES GENERIQUES */
-.menu {
-    background-color: var(--light-color);
-}
-
-.accueil {
-    text-align: center;
-}
 
 /* Titre principal site (page d'accueil) */
 .titleTypeMain {
@@ -81,12 +78,53 @@ li {
     color: var(--primary-color);
 }
 
-/* Bloc type */
-.borderBloc {
+/* Block type */
+.borderBlock {
     background-color: var(--light-color);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--dark-box-shadow);
 }
+
+/* Main column */
+.mainCol {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .mainCol {
+        max-width: 808px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
+
+/* home page */
+.homePage__block {
+    text-align: center;
+}
+
+.homePage__title {
+    margin: 0;
+}
+
+.homePage__title__text {
+    margin: 0;
+}
+
+.homePage__subTitle {
+    margin: 0;
+}
+
+/* fin home page */
+
+/* page Hello
+
+
+ fin page Hello*/
 
 /*PAGE MEMBERS*/
 .titlePage {
@@ -148,3 +186,4 @@ section {
 }
 
 /*FIN PAGE MEMBERS*/
+
