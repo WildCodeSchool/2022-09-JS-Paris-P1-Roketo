@@ -6,6 +6,9 @@
   --light-color: #fafdf5;
   --title-font: "Teko", Arial, Helvetica, sans-serif;
   --text-font: "Ubuntu", Arial, Helvetica, sans-serif;
+  --border-radius: 10px;
+  --dark-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --light-box-shadow: rgba(250, 253, 245, 0.24) 0px 3px 8px;
 }
 
 /* RESET */
@@ -26,6 +29,7 @@ body {
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 400;
+  padding-bottom: 50px;
 }
 
 a {
@@ -60,7 +64,7 @@ li {
   flex-direction: column;
 }
 
-ul {
+.menu__list {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -76,7 +80,7 @@ ul {
   transition: transform 0.4s ease-in;
 }
 
-li {
+.menu__item {
   list-style: none;
   text-align: center;
   padding: 1rem;
@@ -85,13 +89,13 @@ li {
   opacity: 0;
 }
 
-a {
+.menu__link {
   color: var(--dark-color);
   letter-spacing: 2px;
   padding: 0.5rem;
 }
 
-a:hover {
+.menu__link:hover {
   font-weight: 700;
 }
 
@@ -115,7 +119,7 @@ a:hover {
   transition: transform 0.3s ease-in;
 }
 
-.open ul {
+.open .menu__list {
   transform: translateX(0);
 }
 
@@ -145,11 +149,53 @@ a:hover {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* END BURGER MENU*/
+@media screen and (min-width: 769px) {
+  .menu {
+    background-color: transparent;
+  }
 
-.accueil {
-  text-align: center;
+  .menu__list {
+    flex-direction: row;
+    position: initial;
+    background-color: transparent;
+    justify-content: space-between;
+    transform: none;
+    transition: none;
+    width: 100%;
+    height: 9vh;
+    padding: 3rem;
+    margin-bottom: 0;
+  }
+
+  .menu__item {
+    opacity: 1;
+    width: 15vw;
+  }
+
+  .menu__link {
+    display: block;
+    color: var(--light-color);
+    letter-spacing: 2px;
+    padding: 0.5rem;
+    margin: -1rem;
+    box-shadow: inset 0 0 0 0 var(--secondary-color);
+    border-radius: 10px;
+    transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+  }
+
+  .menu__link:hover {
+    text-decoration: none;
+    box-shadow: inset 300px 0 0 0 var(--primary-color);
+    border-radius: 10px;
+    color: var(--dark-color);
+  }
+
+  .burgerIcon {
+    display: none;
+  }
 }
+
+/* END BURGER MENU*/
 
 /* Titre principal site (page d'accueil) */
 .titleTypeMain {
@@ -175,55 +221,152 @@ a:hover {
   color: var(--primary-color);
 }
 
-/* Bloc type */
-.borderBloc {
+/* Block type */
+.borderBlock {
   background-color: var(--light-color);
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--dark-box-shadow);
 }
 
-@media screen and (min-width: 769px) {
-  .menu {
-    background-color: transparent;
-  }
+/* Main column */
+.mainCol {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  ul {
+@media screen and (min-width: 768px) {
+  .mainCol {
+    max-width: 808px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+.mainCol2 {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .mainCol2 {
+    max-width: 1200 px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+/* home page */
+.homePage__block {
+  text-align: center;
+}
+
+.homePage__title {
+  margin: 0;
+}
+
+.homePage__title__text {
+  margin: 0;
+}
+
+.homePage__subTitle {
+  margin: 0;
+}
+
+/* fin home page */
+
+/* page Hello
+
+
+ fin page Hello*/
+
+/*PAGE MEMBERS*/
+
+.profileFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .profileFlex {
     flex-direction: row;
-    position: initial;
-    background-color: transparent;
-    justify-content: space-between;
-    transform: none;
-    transition: none;
-    width: 100%;
-    height: 9vh;
-    padding: 3rem;
-    margin-bottom: 0;
-  }
-
-  li {
-    opacity: 1;
-    width: 15vw;
-  }
-
-  a {
-    display: block;
-    color: var(--light-color);
-    letter-spacing: 2px;
-    padding: 0.5rem;
-    margin: -1rem;
-    box-shadow: inset 0 0 0 0 var(--secondary-color);
-    border-radius: 10px;
-    transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
-  }
-
-  a:hover {
-    text-decoration: none;
-    box-shadow: inset 300px 0 0 0 var(--primary-color);
-    border-radius: 10px;
-    color: var(--dark-color);
-  }
-
-  .burgerIcon {
-    display: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
+
+.profileCard {
+  background-color: var(--light-color);
+  padding-bottom: 50px;
+  position: relative;
+  margin: 220px 0 0;
+  max-width: 450px;
+  border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 768px) {
+  .profileCard {
+    flex: 0 0 600px;
+    padding-bottom: 0px;
+  }
+}
+
+.profilePic {
+  position: absolute;
+  top: -150px;
+  left: 30%;
+  height: 250px;
+  border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 768px) {
+  .profilePic {
+    left: 130px;
+  }
+}
+
+.membersName {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 130px;
+}
+
+.bio {
+  font-size: 20px;
+  margin: 30px;
+}
+
+.tagBloc {
+  height: 200px;
+  padding: 0 20px 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 10px 0 0;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+}
+
+.pastille {
+  position: absolute;
+  right: -10px;
+  height: 60px;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 768px) {
+  .pastille {
+    right: -15px;
+    bottom: -15px;
+  }
+}
+
+/*FIN PAGE MEMBERS*/
