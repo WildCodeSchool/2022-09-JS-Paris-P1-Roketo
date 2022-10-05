@@ -1,4 +1,6 @@
-/*toogle FAQ*/
+/*FAQ*/
+
+const faqButton = () => {
 
 const toggleBtn = document.querySelectorAll('.faqCard__b');
 
@@ -15,6 +17,9 @@ toggleBtn.forEach(btn => {
     })
 })
 
+}
+
+faqButton()
 
 /*Burger*/
 
