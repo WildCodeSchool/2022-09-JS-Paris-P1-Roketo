@@ -1,8 +1,8 @@
 /* VARIABLES */
 :root {
-  --dark-color: #200c44;
-  --primary-color: #5ca7db;
-  --secondary-color: #a0d639;
+  --dark-color: #1A083A;
+  --primary-color: #76fcc9;
+  --secondary-color: #B939D6;
   --light-color: #fafdf5;
   --title-font: "Teko", Arial, Helvetica, sans-serif;
   --text-font: "Ubuntu", Arial, Helvetica, sans-serif;
@@ -271,19 +271,17 @@ li {
 }
 
 #bubbles span:nth-child(even) {
-  /*even blue*/
   background-color: var(--primary-color);
-  box-shadow: 0 0 0 2px RGBA(79, 195, 220, 0.4),
-    /*blue*/ 0 0 6px 3px RGBA(79, 195, 220, 0.4),
-    /*green*/ 0 0 10px 6px RGBA(79, 195, 220, 0.4) /*blue*/;
+  box-shadow: 0 0 0 2px RGBA(118, 252, 201, 0.4),
+  0 0 6px 3px RGBA(118, 252, 201, 0.4),
+  0 0 10px 6px RGBA(118, 252, 201, 0.4)
 }
 
 #bubbles span:nth-child(6n + 0) {
-  /*rare green*/
-  --secondary-color: rgb(160, 214, 57);
   background-color: var(--secondary-color);
-  box-shadow: 0 0 0 2px RGBA(160, 214, 57, 0.4),
-    0 0 6px 3px RGBA(160, 214, 57, 0.4), 0 0 10px 6px RGBA(160, 214, 57, 0.4);
+  box-shadow: 0 0 0 2px RGBA(185, 57, 214, 0.4),
+    0 0 6px 3px RGBA(185, 57, 214, 0.4), 
+    0 0 10px 6px RGBA(185, 57, 214, 0.4);
 }
 
 @keyframes animate {
@@ -349,16 +347,26 @@ li {
 /* VICTOR page Hello */
 
 .description {
-  color: var(--light-color);
+  /*color: var(--light-color);*/
   margin: 0;
+  padding: 20px;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
 }
 
 .pic {
   margin: 30px 0 0;
 }
 
+.pic__text {
+  color: var(--light-color);
+  text-align: center;
+  font-style: italic;
+}
+
 .pic img {
   max-width: 100%;
+  border-radius: var(--border-radius);
 }
 
 /* fin page Hello */
@@ -430,7 +438,7 @@ li {
   font-weight: 600;
   margin: 10px 10px 0 0;
   padding: 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: var(--border-radius);
 }
 
@@ -464,8 +472,8 @@ li {
     margin-top: 20px;
     border-radius: var(--border-radius);
     background-color: var(--light-color);
-    border-left: 10px solid var(--primary-color);
-    border-right: 10px solid var(--primary-color);
+    border-left: 10px solid var(--secondary-color);
+    border-right: 10px solid var(--secondary-color);
 }
 
 .faqCard__button {
