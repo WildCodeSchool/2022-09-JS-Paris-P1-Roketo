@@ -203,12 +203,6 @@ li {
   .burgerIcon {
     display: none;
   }
-
-  @media screen and (min-width: 1024px) {
-    .menu__item {
-      font-size: 1.7rem;
-    }
-  }
 }
 
 /* END BURGER MENU*/
@@ -244,12 +238,69 @@ li {
   box-shadow: var(--dark-box-shadow);
 }
 
+/* Animated background */
+.animatedBG {
+  position: absolute;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+  background-color: var(--dark-color);
+  z-index: -1;
+  top: 0;
+}
+
+#bubbles {
+  /*position: relative;*/
+  display: flex;
+}
+
+#bubbles span {
+  /*default white*/
+  /*position: relative;*/
+  width: 5px;
+  height: 5px;
+  background-color: var(--light-color);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px RGBA(250, 253, 245, 0.4),
+    0 0 6px 3px RGBA(250, 253, 245, 0.4), 0 0 10px 6px RGBA(250, 253, 245, 0.4);
+  animation: animate 15s linear infinite;
+  animation-duration: 15s; /*default value*/
+  /*generation js animation-duration: entre 5 et 15s*/
+}
+
+#bubbles span:nth-child(even) {
+  /*even blue*/
+  background-color: var(--primary-color);
+  box-shadow: 0 0 0 2px RGBA(79, 195, 220, 0.4),
+    /*blue*/ 0 0 6px 3px RGBA(79, 195, 220, 0.4),
+    /*green*/ 0 0 10px 6px RGBA(79, 195, 220, 0.4) /*blue*/;
+}
+
+#bubbles span:nth-child(6n + 0) {
+  /*rare green*/
+  --secondary-color: rgb(160, 214, 57);
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px RGBA(160, 214, 57, 0.4),
+    0 0 6px 3px RGBA(160, 214, 57, 0.4), 0 0 10px 6px RGBA(160, 214, 57, 0.4);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(-10vh);
+  }
+}
+
 /* Main column */
 .mainCol {
   margin: 0 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -280,24 +331,38 @@ li {
   text-align: center;
 }
 
-.homePage__title {
-  margin: 0;
-}
-
-.homePage__title__text {
-  margin: 0;
-}
-
+.homePage__title,
+.homePage__titleText,
 .homePage__subTitle {
   margin: 0;
 }
 
+.homePage__titleLogo {
+  max-width: 100%;
+}
+
+.homePage__titleText {
+  line-height: 1;
+}
+
 /* fin home page */
 
-/* page Hello
+/* VICTOR page Hello */
 
+.description {
+  color: var(--light-color);
+  margin: 0;
+}
 
- fin page Hello*/
+.pic {
+  margin: 30px 0 0;
+}
+
+.pic img {
+  max-width: 100%;
+}
+
+/* fin page Hello */
 
 /*PAGE MEMBERS*/
 
@@ -386,3 +451,110 @@ li {
 }
 
 /*FIN PAGE MEMBERS*/
+
+/* page FAQ */
+
+.faqTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.faqCard {
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: var(--light-color);
+  border-left: 10px solid var(--primary-color);
+  border-right: 10px solid var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .faqCard {
+    padding: 15px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: var(--light-color);
+    border-left: 10px solid var(--primary-color);
+    border-right: 10px solid var(--primary-color);
+  }
+}
+
+.faqCard__b {
+  margin-left: 90%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-right: 4px solid var(--dark-color);
+  border-top: 4px solid var(--dark-color);
+  rotate: 135deg;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .faqCard__b {
+    display: flex;
+    margin-left: 90%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-right: 4px solid var(--dark-color);
+    border-top: 4px solid var(--dark-color);
+    rotate: 135deg;
+    cursor: pointer;
+  }
+}
+
+.faqCard__question {
+  display: flex;
+  justify-content: center;
+  font-family: var(--text-font);
+  border-bottom: solid 1px;
+  border-radius: 8px;
+}
+
+.faqCard__answer {
+  opacity: 0;
+}
+
+.open {
+  display: flex;
+  justify-content: center;
+  font-family: var(--text-font);
+  opacity: 100;
+  transition: 0.3s;
+  margin-bottom: 15%;
+}
+
+@media screen and (min-width: 768px) {
+  .open {
+    display: flex;
+    justify-content: center;
+    font-family: var(--text-font);
+    opacity: 100;
+    transition: 0.3s;
+  }
+}
+
+.active {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-right: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color);
+  rotate: 315deg;
+  transition: 0.2s;
+}
+
+@media screen and (min-width: 768px) {
+  .active {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-right: 4px solid var(--primary-color);
+    border-top: 4px solid var(--primary-color);
+    rotate: 315deg;
+    transition: 0.2s;
+  }
+}
+
+/*FIN FAQ*/

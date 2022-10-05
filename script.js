@@ -1,3 +1,28 @@
+/*FAQ*/
+
+const faqButton = () => {
+
+const toggleBtn = document.querySelectorAll('.faqCard__b');
+
+toggleBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.nextElementSibling.classList.toggle('open')
+    })
+})
+
+
+toggleBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('active')
+    })
+})
+
+}
+
+faqButton()
+
+/*Burger*/
+
 const navSlide = () => {
     const toggle = document.querySelector('.burgerIcon');
     const navMenu = document.querySelector('.menu');
@@ -25,12 +50,13 @@ toggle.addEventListener('click', () => {
     //BURGER MENU ANIMATION//
     toggle.classList.toggle('switch');
 
-    //ACTIVE PAGE//
-
 });
 }
 navSlide();
 
+//FIN BURGER MENU//
+
+//HIGHLIGHT ACTIVE PAGE//
 const activePage = () => {
     const navLinks = document.querySelectorAll('.menu__link');
 
@@ -41,10 +67,21 @@ navLinks.forEach(link => {
 });
 }
 activePage();
+//FIN DU MENU HIGHLIGHT//
 
 
+/* animation background */
 
 
- 
+const bubblesContainer = document.querySelector("#bubbles");
+// Generate 100 bubbles with random duration style
+for (let i = 0; i < 100; i++){
+    // Generate a random number between 5 and 15 included for duration style
+    const bubbleDuration = Math.random() * (15 - 5) + 5;
+    const bubble = document.createElement("span");
+    bubble.style.animationDuration = `${bubbleDuration}s`;
+    bubblesContainer.appendChild(bubble);
+};
 
+/* *FIN animation background */
 
