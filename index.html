@@ -12,32 +12,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
-
     <link href="/styles.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="homePage">
     <header>
         <nav class="menu">
-            <span class="burgerIcon">_</span>
-            <span class="crossIcon">X</span>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/hello.html">Roketto's Crew</a></li>
-                <li><a href="/members.html">Rokettonauts</a></li>
-                <li><a href="/faq.html">Questions ?</a></li>
+            <div class="burgerIcon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+                    
+            <ul class = "menu__list">
+                <li class="menu__item"><a class="menu__link" href="/index.html">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="/hello.html">Roketto's Crew</a></li>
+                <li class="menu__item"><a class="menu__link" href="/members.html">Rokettonauts</a></li>
+                <li class="menu__item"><a class="menu__link" href="/faq.html">Questions ?</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="accueil">
-            <h1 class="titleType1">
-                <img src="/img/logo.png" alt="rocket logo" />
-                <p>Roketto</p>
+    <main class="mainCol">
+        <section class="homePage__block">
+            <h1 class="titleTypeMain homePage__title">
+                <img class="homePage__title__logo" src="/img/logo.png" alt="rocket logo" />
+                <p class="homePage__title__text">Roketto</p>
             </h1>
-            <p>The web is our galaxy.</p>
+            <p class="titleTypeSub homePage__subTitle">The web is our galaxy.</p>
         </section>
+
         <section class="test">
             <div class="color1"></div>
             <div class="color2"></div>
