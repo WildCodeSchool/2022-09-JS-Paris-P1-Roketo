@@ -370,3 +370,63 @@ li {
 }
 
 /*FIN PAGE MEMBERS*/
+
+/* page FAQ */
+
+h1 {
+  display: flex;  
+  justify-content: center;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--light-color);
+}
+
+.faqCard {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 5%;
+  background-color: var(--light-color);
+  border-radius:8px;
+  margin-top: 5%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.faqCard__b {
+  margin-left: 90%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-right: 4px solid var(--dark-color); 
+  border-top: 4px solid var(--dark-color);
+  rotate: 135deg;
+}
+
+.faqCard__question{
+  border-bottom: solid 1px;
+  border-radius: 8px;
+}
+
+.faqCard__answer{
+  opacity: 0;
+}
+
+.open {    
+  width: 200px;
+  border-radius: 8px;
+  opacity: 100;
+  transition: 0.2s;
+  border-bottom: solid 1px;
+}
+
+.active {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-right: 4px solid var(--primary-color); 
+  border-top: 4px solid var(--primary-color);  
+  rotate: 315deg;
+  transition: 0.2s;
+}
+
+/*FIN FAQ
