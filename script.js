@@ -32,7 +32,7 @@ toggle.addEventListener('click', () => {
 
     //TOGGLE NAV//
     /* when burgericon clikced, create a class 'open' where menu appears*/
-    navMenu.classList.toggle('open'); 
+    navMenu.classList.toggle('open');
 
     //ANIMATION OF LINKS//
     
