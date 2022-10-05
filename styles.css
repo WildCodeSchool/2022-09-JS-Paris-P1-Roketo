@@ -279,10 +279,17 @@ li {
 
 /* fin home page */
 
-/* page Hello
+/* VICTOR page Hello */
+
+.description {
+background-color: var(--light-color);
+}
+.pic img {
+  max-width: 100%;
+}
 
 
- fin page Hello*/
+ /* fin page Hello */
 
 /*PAGE MEMBERS*/
 
