@@ -1,8 +1,8 @@
 /* VARIABLES */
 :root {
-  --dark-color: #200c44;
-  --primary-color: #5ca7db;
-  --secondary-color: #a0d639;
+  --dark-color: #1A083A;
+  --primary-color: #76fcc9;
+  --secondary-color: #B939D6;
   --light-color: #fafdf5;
   --title-font: "Teko", Arial, Helvetica, sans-serif;
   --text-font: "Ubuntu", Arial, Helvetica, sans-serif;
@@ -221,6 +221,7 @@ li {
   font-weight: 700;
   font-size: 4rem;
   color: var(--primary-color);
+  text-align: center;
 }
 
 /* Sous titre */
@@ -270,19 +271,17 @@ li {
 }
 
 #bubbles span:nth-child(even) {
-  /*even blue*/
   background-color: var(--primary-color);
-  box-shadow: 0 0 0 2px RGBA(79, 195, 220, 0.4),
-    /*blue*/ 0 0 6px 3px RGBA(79, 195, 220, 0.4),
-    /*green*/ 0 0 10px 6px RGBA(79, 195, 220, 0.4) /*blue*/;
+  box-shadow: 0 0 0 2px RGBA(118, 252, 201, 0.4),
+  0 0 6px 3px RGBA(118, 252, 201, 0.4),
+  0 0 10px 6px RGBA(118, 252, 201, 0.4)
 }
 
 #bubbles span:nth-child(6n + 0) {
-  /*rare green*/
-  --secondary-color: rgb(160, 214, 57);
   background-color: var(--secondary-color);
-  box-shadow: 0 0 0 2px RGBA(160, 214, 57, 0.4),
-    0 0 6px 3px RGBA(160, 214, 57, 0.4), 0 0 10px 6px RGBA(160, 214, 57, 0.4);
+  box-shadow: 0 0 0 2px RGBA(185, 57, 214, 0.4),
+    0 0 6px 3px RGBA(185, 57, 214, 0.4), 
+    0 0 10px 6px RGBA(185, 57, 214, 0.4);
 }
 
 @keyframes animate {
@@ -299,8 +298,6 @@ li {
   margin: 0 20px;
   display: flex;
   flex-direction: column;
-  /*justify-content: center;*/
-  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -350,16 +347,26 @@ li {
 /* VICTOR page Hello */
 
 .description {
-  color: var(--light-color);
+  /*color: var(--light-color);*/
   margin: 0;
+  padding: 20px;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
 }
 
 .pic {
   margin: 30px 0 0;
 }
 
+.pic__text {
+  color: var(--light-color);
+  text-align: center;
+  font-style: italic;
+}
+
 .pic img {
   max-width: 100%;
+  border-radius: var(--border-radius);
 }
 
 /* fin page Hello */
@@ -431,7 +438,7 @@ li {
   font-weight: 600;
   margin: 10px 10px 0 0;
   padding: 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: var(--border-radius);
 }
 
@@ -460,29 +467,28 @@ li {
 }
 
 .faqCard {
-  padding: 15px 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  background-color: var(--light-color);
-  border-left: 10px solid var(--primary-color);
-  border-right: 10px solid var(--primary-color);
-}
-
-@media screen and (min-width: 768px) {
-  .faqCard {
+    position: relative;
     padding: 15px 20px;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     background-color: var(--light-color);
-    border-left: 10px solid var(--primary-color);
-    border-right: 10px solid var(--primary-color);
-  }
+    border-left: 10px solid var(--secondary-color);
+    border-right: 10px solid var(--secondary-color);
 }
 
-.faqCard__b {
-  margin-left: 90%;
+.faqCard__button {
+  position: absolute;
+  content: '';
+  z-index: 1;
+  top: 12px;
+  right: 24px;
+  /*
   width: 20px;
   height: 20px;
+  */
+  width: 1px;
+  height: 1px;
+  padding: 9px;
   background-color: transparent;
   border-right: 4px solid var(--dark-color);
   border-top: 4px solid var(--dark-color);
@@ -490,71 +496,33 @@ li {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
-  .faqCard__b {
-    display: flex;
-    margin-left: 90%;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border-right: 4px solid var(--dark-color);
-    border-top: 4px solid var(--dark-color);
-    rotate: 135deg;
-    cursor: pointer;
-  }
-}
-
-.faqCard__question {
-  display: flex;
-  justify-content: center;
-  font-family: var(--text-font);
-  border-bottom: solid 1px;
-  border-radius: 8px;
-}
-
-.faqCard__answer {
-  opacity: 0;
-}
-
-.open {
-  display: flex;
-  justify-content: center;
-  font-family: var(--text-font);
-  opacity: 100;
-  transition: 0.3s;
-  margin-bottom: 15%;
-}
-
-@media screen and (min-width: 768px) {
-  .open {
-    display: flex;
-    justify-content: center;
-    font-family: var(--text-font);
-    opacity: 100;
-    transition: 0.3s;
-  }
-}
-
-.active {
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border-right: 4px solid var(--primary-color);
-  border-top: 4px solid var(--primary-color);
-  rotate: 315deg;
-  transition: 0.2s;
-}
-
-@media screen and (min-width: 768px) {
-  .active {
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
+.faqCard__button.active {
+    top: 19px;
     border-right: 4px solid var(--primary-color);
     border-top: 4px solid var(--primary-color);
     rotate: 315deg;
     transition: 0.2s;
-  }
+}
+
+.faqCard__question {
+    margin: 0;
+    font-family: var(--text-font);
+    padding-right: 40px;
+}
+
+.faqCard__answer {
+    margin: 10px 0 0 0;
+    padding-top: 10px;
+    border-top: 1px solid var(--dark-color);
+    /*opacity: 0;*/
+    display: none;
+}
+
+.faqCard__answer.open {
+  font-family: var(--text-font);
+  /*opacity: 100;*/
+  display: block;
+  transition: 0.3s;
 }
 
 /*FIN FAQ*/
