@@ -2,24 +2,23 @@
 
 const faqButton = () => {
 
-const toggleBtn = document.querySelectorAll('.faqCard__b');
+const toggleBtn = document.querySelectorAll('.faqCard__button');
 
 toggleBtn.forEach(btn => {
     btn.addEventListener('click', () => {
-        btn.nextElementSibling.classList.toggle('open')
-    })
-})
-
+        btn.nextElementSibling.classList.toggle('open');
+    });
+});
 
 toggleBtn.forEach(btn => {
     btn.addEventListener('click', () => {
-        btn.classList.toggle('active')
-    })
-})
+        btn.classList.toggle('active');
+    });
+});
 
 }
 
-faqButton()
+faqButton();
 
 /*Burger*/
 
