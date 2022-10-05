@@ -324,9 +324,11 @@ li {
   border-radius: var(--border-radius);
 }
 
-@media screen and (min-width: 768px) {
-  .profilePic {}
-}
+/*@media screen and (min-width: 768px) {
+  .profilePic {
+    
+  }
+}*/
 
 .membersName {
   text-align: center;
