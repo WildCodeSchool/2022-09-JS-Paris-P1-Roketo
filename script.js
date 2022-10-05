@@ -24,22 +24,21 @@ faqButton()
 /*Burger*/
 
 const navSlide = () => {
-
-const toggle = document.querySelector('.burgerIcon');
-const navList = document.querySelector('nav');
-const navLinks = document.querySelectorAll('li');
+    const toggle = document.querySelector('.burgerIcon');
+    const navMenu = document.querySelector('.menu');
+    const navItems = document.querySelectorAll('.menu__item');
 /* Create a class 'open' when burger menu clicked */
 toggle.addEventListener('click', () => {
 
     //TOGGLE NAV//
     /* when burgericon clikced, create a class 'open' where menu appears*/
-    navList.classList.toggle('open'); 
+    navMenu.classList.toggle('open'); 
 
     //ANIMATION OF LINKS//
     
     /*for each link we get its index so we can animate the delay between each*/
     /*also, we make sure the animation happens each time we open the navigaiton bar*/
-    navLinks.forEach((link,index) =>{
+    navItems.forEach((link,index) =>{
         if (link.style.animation){
             link.style.animation =''
         }else {
@@ -50,12 +49,29 @@ toggle.addEventListener('click', () => {
     });
     //BURGER MENU ANIMATION//
     toggle.classList.toggle('switch');
+
 });
 }
-
 navSlide();
 
+//FIN BURGER MENU//
+
+//HIGHLIGHT ACTIVE PAGE//
+const activePage = () => {
+    const navLinks = document.querySelectorAll('.menu__link');
+
+navLinks.forEach(link => {
+    if(link.href === window.location.href){
+        link.setAttribute('aria-current', 'page')
+    }
+});
+}
+activePage();
+//FIN DU MENU HIGHLIGHT//
+
+
 /* animation background */
+
 
 const bubblesContainer = document.querySelector("#bubbles");
 // Generate 100 bubbles with random duration style
