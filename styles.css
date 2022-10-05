@@ -233,7 +233,7 @@ li {
 .animatedBG{
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     overflow:hidden;
     background-color: var(--dark-color);
     z-index: -1;
@@ -328,16 +328,18 @@ li {
   text-align: center;
 }
 
-.homePage__title {
-  margin: 0;
-}
-
-.homePage__title__text {
-  margin: 0;
-}
-
+.homePage__title,
+.homePage__titleText,
 .homePage__subTitle {
   margin: 0;
+}
+
+.homePage__titleLogo {
+  max-width: 100%;
+}
+
+.homePage__titleText{
+    line-height: 1;
 }
 
 /* fin home page */
