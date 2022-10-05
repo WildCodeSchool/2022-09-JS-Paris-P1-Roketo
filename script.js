@@ -1,3 +1,23 @@
+/*toogle FAQ*/
+
+const toggleBtn = document.querySelectorAll('.faqCard__b');
+
+toggleBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.nextElementSibling.classList.toggle('open')
+    })
+})
+
+
+toggleBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('active')
+    })
+})
+
+
+/*Burger*/
+
 const navSlide = () => {
 
 const toggle = document.querySelector('.burgerIcon');
@@ -30,7 +50,6 @@ toggle.addEventListener('click', () => {
 
 navSlide();
 
-
 /* animation background */
 
 const bubblesContainer = document.querySelector("#bubbles");
@@ -44,9 +63,4 @@ for (let i = 0; i < 100; i++){
 };
 
 /* *FIN animation background */
-
-
-
- 
-
 
