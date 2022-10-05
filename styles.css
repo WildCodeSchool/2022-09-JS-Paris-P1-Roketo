@@ -25,7 +25,7 @@ html {
 body {
   margin: 0;
   font-family: var(--text-font);
-  /*background-color: var(--dark-color);*/
+  background-color: var(--dark-color);
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 400;
@@ -237,6 +237,7 @@ li {
     overflow:hidden;
     background-color: var(--dark-color);
     z-index: -1;
+    top: 0;
 }
 
 #bubbles{
@@ -341,10 +342,23 @@ li {
 
 /* fin home page */
 
-/* page Hello
+/* VICTOR page Hello */
+
+.description {
+  color: var(--light-color);
+  margin: 0;
+}
+
+.pic {
+  margin: 30px 0 0;
+}
+
+.pic img {
+  max-width: 100%;
+}
 
 
- fin page Hello*/
+ /* fin page Hello */
 
 /*PAGE MEMBERS*/
 
