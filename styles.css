@@ -494,36 +494,38 @@ li {
   border-right: 4px solid var(--dark-color);
   border-top: 4px solid var(--dark-color);
   rotate: 135deg;
+  transition: 0.3s;
   cursor: pointer;
 }
 
 .faqCard__button.active {
-  top: 19px;
-  border-right: 4px solid var(--primary-color);
-  border-top: 4px solid var(--primary-color);
-  rotate: 315deg;
-  transition: 0.2s;
+    top: 19px;
+    border-right: 4px solid var(--secondary-color);
+    border-top: 4px solid var(--secondary-color);
+    rotate: 315deg;
+    transition: 0.3s;
 }
 
 .faqCard__question {
-  margin: 0;
-  font-family: var(--text-font);
-  padding-right: 40px;
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 1rem;
+    font-family: var(--text-font);
+    padding-right: 40px;
 }
 
 .faqCard__answer {
-  margin: 10px 0 0 0;
-  padding-top: 10px;
-  border-top: 1px solid var(--dark-color);
-  /*opacity: 0;*/
-  display: none;
+    margin: 10px 0 0 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--dark-color);
+    /*opacity: 0;*/
+    display: none;
 }
 
 .faqCard__answer.open {
   font-family: var(--text-font);
   /*opacity: 100;*/
   display: block;
-  transition: 0.3s;
 }
 
 /*FIN FAQ*/
