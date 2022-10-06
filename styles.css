@@ -266,21 +266,22 @@ li {
   box-shadow: 0 0 0 2px RGBA(250, 253, 245, 0.4),
     0 0 6px 3px RGBA(250, 253, 245, 0.4), 0 0 10px 6px RGBA(250, 253, 245, 0.4);
   animation: animate 15s linear infinite;
-  animation-duration: 15s; /*default value*/
+  animation-duration: 15s;
+  /*default value*/
   /*generation js animation-duration: entre 5 et 15s*/
 }
 
 #bubbles span:nth-child(even) {
   background-color: var(--primary-color);
   box-shadow: 0 0 0 2px RGBA(118, 252, 201, 0.4),
-  0 0 6px 3px RGBA(118, 252, 201, 0.4),
-  0 0 10px 6px RGBA(118, 252, 201, 0.4)
+    0 0 6px 3px RGBA(118, 252, 201, 0.4),
+    0 0 10px 6px RGBA(118, 252, 201, 0.4)
 }
 
 #bubbles span:nth-child(6n + 0) {
   background-color: var(--secondary-color);
   box-shadow: 0 0 0 2px RGBA(185, 57, 214, 0.4),
-    0 0 6px 3px RGBA(185, 57, 214, 0.4), 
+    0 0 6px 3px RGBA(185, 57, 214, 0.4),
     0 0 10px 6px RGBA(185, 57, 214, 0.4);
 }
 
@@ -288,6 +289,7 @@ li {
   0% {
     transform: translateY(100vh);
   }
+
   100% {
     transform: translateY(-10vh);
   }
@@ -411,10 +413,6 @@ li {
   border-radius: var(--border-radius);
 }
 
-@media screen and (min-width: 768px) {
-  .profilePic {
-  }
-}
 
 .membersName {
   text-align: center;
@@ -467,13 +465,13 @@ li {
 }
 
 .faqCard {
-    position: relative;
-    padding: 15px 20px;
-    margin-top: 20px;
-    border-radius: var(--border-radius);
-    background-color: var(--light-color);
-    border-left: 10px solid var(--secondary-color);
-    border-right: 10px solid var(--secondary-color);
+  position: relative;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+  border-left: 10px solid var(--secondary-color);
+  border-right: 10px solid var(--secondary-color);
 }
 
 .faqCard__button {
@@ -497,25 +495,25 @@ li {
 }
 
 .faqCard__button.active {
-    top: 19px;
-    border-right: 4px solid var(--primary-color);
-    border-top: 4px solid var(--primary-color);
-    rotate: 315deg;
-    transition: 0.2s;
+  top: 19px;
+  border-right: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color);
+  rotate: 315deg;
+  transition: 0.2s;
 }
 
 .faqCard__question {
-    margin: 0;
-    font-family: var(--text-font);
-    padding-right: 40px;
+  margin: 0;
+  font-family: var(--text-font);
+  padding-right: 40px;
 }
 
 .faqCard__answer {
-    margin: 10px 0 0 0;
-    padding-top: 10px;
-    border-top: 1px solid var(--dark-color);
-    /*opacity: 0;*/
-    display: none;
+  margin: 10px 0 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--dark-color);
+  /*opacity: 0;*/
+  display: none;
 }
 
 .faqCard__answer.open {
