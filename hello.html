@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- en tete de la page -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,53 +17,53 @@
 </head>
 
 <body>
+    <header>
+            <nav class="menu">
+                <div class="burgerIcon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                        
+                <ul class = "menu__list">
+                    <li class="menu__item"><a class="menu__link" href="/index.html">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/hello.html">Roketto's Crew</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/members.html">Rokettonauts</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/faq.html">Questions ?</a></li>
+                </ul>
+            </nav>
+    </header>
 
-<header>
-        <nav class="menu">
-            <div class="burgerIcon">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-                    
-            <ul class = "menu__list">
-                <li class="menu__item"><a class="menu__link" href="/index.html">Home</a></li>
-                <li class="menu__item"><a class="menu__link" href="/hello.html">Roketto's Crew</a></li>
-                <li class="menu__item"><a class="menu__link" href="/members.html">Rokettonauts</a></li>
-                <li class="menu__item"><a class="menu__link" href="/faq.html">Questions ?</a></li>
-            </ul>
-        </nav>
-</header>
-    <!-- corps de la page -->
-    <!-- ajoute balise "main"-->
+    <main class="mainCol helloPage">
+        <h1 class="titleTypePage">HELLO.</h1>
+        <p class="description">Digital is not just a job for us, it is a passion and we are more than confident that we can bring your brand to life in compelling ways, and help fuel your growth goals. <br>
+            We build awesome websites designed from scratch and in touch with your users to take you out into another galaxy. <br>
+            Proudly a 'little' team, we exclusively serve individuals, startups and small to medium scale companies through our portfolio of affordable, packaged services. <br>
+            Our offerings are designed to give you great options to get started or you could reach out for a custom quote if you want to reach the stars with us! <br>
+            Get in touch, and let’s build awesomness together!"		
+        </p>
 
-    <!--paragraphe 1-->
-    <h1 id="hello">Hello.</h1>
-    <p>
-        Digital is not just a job for us, it is a passion and we are more than confident that we can bring your brand to life in compelling ways, and help fuel your growth goals. <br>
-        We build awesome websites designed from scratch and in touch with your users to take you out into another galaxy. <br>
-        Proudly a 'little' team, we exclusively serve individuals, startups and small to medium scale companies through our portfolio of affordable, packaged services. <br>
-        Our offerings are designed to give you great options to get started or you could reach out for a custom quote if you want to reach the stars with us! <br>
-        Get in touch, and let’s build awesomness together!"		
-    </p>
-
-    <!-- picture-->
-    <figure>
-        Voici une photo de la Roketto team! :<br />
-        <img src="img/photo_team.jpg" alt="Roketto team!" title="Le web est notre galaxie!" />
-    </figure>
-        
-
-    <!--paragraphe 3-->
-    <h2 id="about">About us</h2>
-    <p>
-    Our Expertises : Our state of mind is characterised by a desire to succeed, creativity and the ability to work in a team. <br>
-    We are specialists in digital development. We provide you a unique and personalized website with our full-stack Javascript skills from wireframes to final product. <br>
-    We are proficients on Html, Css, React and NodeJS (Express). Launch with us !		
-    </p>
+        <figure class="pic">
+            <img src="img/photo_team.jpg" alt="Roketto team!" title="The web is our galaxy" />
+            <figcaption class="pic__text">Getting ready for action !</figcaption>
+        </figure>
+            
+        <h2 class="titleTypeSub">About us</h2>
+        <p class="description">
+            Our Expertises : Our state of mind is characterised by a desire to succeed, creativity and the ability to work in a team. <br>
+            We are specialists in digital development. We provide you a unique and personalized website with our full-stack Javascript skills from wireframes to final product. <br>
+            We are proficients on Html, Css, React and NodeJS (Express). Launch with us !		
+        </p>
     
-<script src="/script.js"></script>
+    </main>  
+    
+    <!--generated content in JS-->
+    <div class="animatedBG">
+        <div id="bubbles"></div>
+    </div>
+    
+    <script src="/script.js"></script>
 
 </body>
 
-</html>
+</html> 

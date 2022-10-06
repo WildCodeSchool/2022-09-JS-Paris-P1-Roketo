@@ -1,8 +1,8 @@
 /* VARIABLES */
 :root {
-  --dark-color: #200c44;
-  --primary-color: #5ca7db;
-  --secondary-color: #a0d639;
+  --dark-color: #1A083A;
+  --primary-color: #76fcc9;
+  --secondary-color: #B939D6;
   --light-color: #fafdf5;
   --title-font: "Teko", Arial, Helvetica, sans-serif;
   --text-font: "Ubuntu", Arial, Helvetica, sans-serif;
@@ -52,14 +52,10 @@ li {
 }
 
 /* STYLES GENERIQUES */
-
+/*  BURGER MENU */
 .menu {
   background-color: var(--light-color);
   display: flex;
-}
-
-/*  BURGER MENU */
-.menu {
   padding: 0;
   flex-direction: column;
 }
@@ -69,12 +65,13 @@ li {
   flex-direction: column;
   position: absolute;
   justify-content: space-evenly;
-  background-color: #fafdf5c8;
-  backdrop-filter: blur (8px);
+  background-color: #fafdf5eb;
+  backdrop-filter: blur (15px);
   border-radius: 0px 30px 30px 0px;
   font-weight: 700;
   width: 60%;
   height: 100vh;
+  z-index: 80;
   align-items: center;
   transform: translateX(-100%);
   transition: transform 0.4s ease-in;
@@ -87,6 +84,7 @@ li {
   margin-top: 8vh;
   margin-bottom: 8vh;
   opacity: 0;
+  font-size: 1.3rem;
 }
 
 .menu__link {
@@ -99,6 +97,10 @@ li {
   font-weight: 700;
 }
 
+.menu__link[aria-current="page"] {
+  color: var(--primary-color);
+}
+
 /*creation burger menu icon*/
 
 .burgerIcon {
@@ -107,14 +109,14 @@ li {
   top: 15px;
   left: 15px;
   padding: 1rem;
-  z-index: 1;
+  z-index: 90;
 }
 
 .burgerIcon div {
-  width: 25px;
-  height: 3px;
-  background-color: var(--secondary-color);
-  margin: 5px;
+  width: 30px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 6px;
   border-radius: 20px;
   transition: transform 0.3s ease-in;
 }
@@ -139,7 +141,7 @@ li {
 
 /* BURGER MENU ANIMATION*/
 .switch .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-8px, 6px);
 }
 
 .switch .line2 {
@@ -147,10 +149,10 @@ li {
 }
 
 .switch .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-8px, -6px);
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .menu {
     background-color: transparent;
   }
@@ -171,11 +173,12 @@ li {
   .menu__item {
     opacity: 1;
     width: 15vw;
+    font-size: initial;
   }
 
   .menu__link {
     display: block;
-    color: var(--light-color);
+    color: var(--primary-color);
     letter-spacing: 2px;
     padding: 0.5rem;
     margin: -1rem;
@@ -189,6 +192,12 @@ li {
     box-shadow: inset 300px 0 0 0 var(--primary-color);
     border-radius: 10px;
     color: var(--dark-color);
+  }
+
+  .menu__link[aria-current="page"] {
+    color: var(--light-color);
+    text-decoration: underline 3px var(--secondary-color);
+    text-underline-offset: 9px;
   }
 
   .burgerIcon {
@@ -212,6 +221,7 @@ li {
   font-weight: 700;
   font-size: 4rem;
   color: var(--primary-color);
+  text-align: center;
 }
 
 /* Sous titre */
@@ -229,12 +239,67 @@ li {
   box-shadow: var(--dark-box-shadow);
 }
 
+/* Animated background */
+.animatedBG {
+  position: absolute;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+  background-color: var(--dark-color);
+  z-index: -1;
+  top: 0;
+}
+
+#bubbles {
+  /*position: relative;*/
+  display: flex;
+}
+
+#bubbles span {
+  /*default white*/
+  /*position: relative;*/
+  width: 5px;
+  height: 5px;
+  background-color: var(--light-color);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px RGBA(250, 253, 245, 0.4),
+    0 0 6px 3px RGBA(250, 253, 245, 0.4), 0 0 10px 6px RGBA(250, 253, 245, 0.4);
+  animation: animate 15s linear infinite;
+  animation-duration: 15s;
+  /*default value*/
+  /*generation js animation-duration: entre 5 et 15s*/
+}
+
+#bubbles span:nth-child(even) {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 0 2px RGBA(118, 252, 201, 0.4),
+    0 0 6px 3px RGBA(118, 252, 201, 0.4),
+    0 0 10px 6px RGBA(118, 252, 201, 0.4)
+}
+
+#bubbles span:nth-child(6n + 0) {
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px RGBA(185, 57, 214, 0.4),
+    0 0 6px 3px RGBA(185, 57, 214, 0.4),
+    0 0 10px 6px RGBA(185, 57, 214, 0.4);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh);
+  }
+
+  100% {
+    transform: translateY(-10vh);
+  }
+}
+
 /* Main column */
 .mainCol {
   margin: 0 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -265,24 +330,48 @@ li {
   text-align: center;
 }
 
-.homePage__title {
-  margin: 0;
-}
-
-.homePage__title__text {
-  margin: 0;
-}
-
+.homePage__title,
+.homePage__titleText,
 .homePage__subTitle {
   margin: 0;
 }
 
+.homePage__titleLogo {
+  max-width: 100%;
+}
+
+.homePage__titleText {
+  line-height: 1;
+}
+
 /* fin home page */
 
-/* page Hello
+/* VICTOR page Hello */
 
+.description {
+  /*color: var(--light-color);*/
+  margin: 0;
+  padding: 20px;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+}
 
- fin page Hello*/
+.pic {
+  margin: 30px 0 0;
+}
+
+.pic__text {
+  color: var(--light-color);
+  text-align: center;
+  font-style: italic;
+}
+
+.pic img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+}
+
+/* fin page Hello */
 
 /*PAGE MEMBERS*/
 
@@ -324,11 +413,6 @@ li {
   border-radius: var(--border-radius);
 }
 
-/*@media screen and (min-width: 768px) {
-  .profilePic {
-    
-  }
-}*/
 
 .membersName {
   text-align: center;
@@ -352,7 +436,7 @@ li {
   font-weight: 600;
   margin: 10px 10px 0 0;
   padding: 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: var(--border-radius);
 }
 
@@ -372,3 +456,71 @@ li {
 }
 
 /*FIN PAGE MEMBERS*/
+
+/* page FAQ */
+
+.faqTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.faqCard {
+  position: relative;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+  border-left: 10px solid var(--secondary-color);
+  border-right: 10px solid var(--secondary-color);
+}
+
+.faqCard__button {
+  position: absolute;
+  content: '';
+  z-index: 1;
+  top: 12px;
+  right: 24px;
+  /*
+  width: 20px;
+  height: 20px;
+  */
+  width: 1px;
+  height: 1px;
+  padding: 9px;
+  background-color: transparent;
+  border-right: 4px solid var(--dark-color);
+  border-top: 4px solid var(--dark-color);
+  rotate: 135deg;
+  cursor: pointer;
+}
+
+.faqCard__button.active {
+  top: 19px;
+  border-right: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color);
+  rotate: 315deg;
+  transition: 0.2s;
+}
+
+.faqCard__question {
+  margin: 0;
+  font-family: var(--text-font);
+  padding-right: 40px;
+}
+
+.faqCard__answer {
+  margin: 10px 0 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--dark-color);
+  /*opacity: 0;*/
+  display: none;
+}
+
+.faqCard__answer.open {
+  font-family: var(--text-font);
+  /*opacity: 100;*/
+  display: block;
+  transition: 0.3s;
+}
+
+/*FIN FAQ*/
