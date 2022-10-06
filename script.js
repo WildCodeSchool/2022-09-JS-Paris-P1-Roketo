@@ -33,6 +33,7 @@ const navSlide = () => {
         /* when burgericon clikced, create a class 'open' where menu appears*/
         navMenu.classList.toggle('open');
 
+
         //ANIMATION OF LINKS//
 
         /*for each link we get its index so we can animate the delay between each*/

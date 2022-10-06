@@ -1,8 +1,8 @@
 /* VARIABLES */
 :root {
-  --dark-color: #1A083A;
+  --dark-color: #1a083a;
   --primary-color: #76fcc9;
-  --secondary-color: #B939D6;
+  --secondary-color: #b939d6;
   --light-color: #fafdf5;
   --title-font: "Teko", Arial, Helvetica, sans-serif;
   --text-font: "Ubuntu", Arial, Helvetica, sans-serif;
@@ -98,7 +98,7 @@ li {
 }
 
 .menu__link[aria-current="page"] {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /*creation burger menu icon*/
@@ -142,6 +142,7 @@ li {
 /* BURGER MENU ANIMATION*/
 .switch .line1 {
   transform: rotate(-45deg) translate(-8px, 6px);
+  background-color: var(--secondary-color);
 }
 
 .switch .line2 {
@@ -150,6 +151,7 @@ li {
 
 .switch .line3 {
   transform: rotate(45deg) translate(-8px, -6px);
+  background-color: var(--secondary-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -182,15 +184,15 @@ li {
     letter-spacing: 2px;
     padding: 0.5rem;
     margin: -1rem;
+    border-radius: var(--border-radius);
     box-shadow: inset 0 0 0 0 var(--secondary-color);
-    border-radius: 10px;
     transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
   }
 
   .menu__link:hover {
     text-decoration: none;
-    box-shadow: inset 300px 0 0 0 var(--primary-color);
-    border-radius: 10px;
+    box-shadow: inset 300px 0 1px 0 var(--primary-color);
+    border-radius: var(--border-radius);
     color: var(--dark-color);
   }
 
@@ -266,30 +268,26 @@ li {
   box-shadow: 0 0 0 2px RGBA(250, 253, 245, 0.4),
     0 0 6px 3px RGBA(250, 253, 245, 0.4), 0 0 10px 6px RGBA(250, 253, 245, 0.4);
   animation: animate 15s linear infinite;
-  animation-duration: 15s;
-  /*default value*/
+  animation-duration: 15s; /*default value*/
   /*generation js animation-duration: entre 5 et 15s*/
 }
 
 #bubbles span:nth-child(even) {
   background-color: var(--primary-color);
   box-shadow: 0 0 0 2px RGBA(118, 252, 201, 0.4),
-    0 0 6px 3px RGBA(118, 252, 201, 0.4),
-    0 0 10px 6px RGBA(118, 252, 201, 0.4)
+    0 0 6px 3px RGBA(118, 252, 201, 0.4), 0 0 10px 6px RGBA(118, 252, 201, 0.4);
 }
 
 #bubbles span:nth-child(6n + 0) {
   background-color: var(--secondary-color);
   box-shadow: 0 0 0 2px RGBA(185, 57, 214, 0.4),
-    0 0 6px 3px RGBA(185, 57, 214, 0.4),
-    0 0 10px 6px RGBA(185, 57, 214, 0.4);
+    0 0 6px 3px RGBA(185, 57, 214, 0.4), 0 0 10px 6px RGBA(185, 57, 214, 0.4);
 }
 
 @keyframes animate {
   0% {
     transform: translateY(100vh);
   }
-
   100% {
     transform: translateY(-10vh);
   }
@@ -413,6 +411,10 @@ li {
   border-radius: var(--border-radius);
 }
 
+@media screen and (min-width: 768px) {
+  .profilePic {
+  }
+}
 
 .membersName {
   text-align: center;
@@ -476,7 +478,7 @@ li {
 
 .faqCard__button {
   position: absolute;
-  content: '';
+  content: "";
   z-index: 1;
   top: 12px;
   right: 24px;
