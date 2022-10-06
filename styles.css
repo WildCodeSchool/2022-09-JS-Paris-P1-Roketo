@@ -463,17 +463,6 @@ li {
   border-right: 10px solid var(--primary-color);
 }
 
-@media screen and (min-width: 768px) {
-  .faqCard {
-    padding: 15px 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    background-color: var(--light-color);
-    border-left: 10px solid var(--primary-color);
-    border-right: 10px solid var(--primary-color);
-  }
-}
-
 
 .faqCard__b {
   margin-left: 90%;
@@ -486,19 +475,6 @@ li {
   cursor:pointer;
 }
 
-@media screen and (min-width: 768px) {
-.faqCard__b {
-  display: flex;
-  margin-left: 90%;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border-right: 4px solid var(--dark-color); 
-  border-top: 4px solid var(--dark-color);
-  rotate: 135deg;
-  cursor:pointer;
-}
-}
 
 .faqCard__question{
   display: flex;
@@ -520,17 +496,7 @@ li {
   transition: 0.3s;
   margin-bottom: 15%;
 }
-
-@media screen and (min-width: 768px) {
-  .open {
-    display: flex;
-    justify-content: center;
-    font-family: var(--text-font);
-    opacity: 100;
-    transition: 0.3s;
-  }
-}
-
+ 
 .active {
   width: 20px;
   height: 20px;
@@ -541,16 +507,5 @@ li {
   transition: 0.2s;
 }
 
-@media screen and (min-width: 768px) {
-  .active {
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border-right: 4px solid var(--primary-color); 
-    border-top: 4px solid var(--primary-color);  
-    rotate: 315deg;
-    transition: 0.2s;
-  }
-}
 
 /*FIN FAQ
