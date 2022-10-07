@@ -227,7 +227,7 @@ li {
   font-size: 4rem;
   color: var(--primary-color);
   text-align: center;
-  margin: 70px 0 30px;
+  margin: 70px 0 40px;
 }
 
 /* Titre secondaire de pages */
@@ -401,7 +401,18 @@ li {
 }
 
 .profileCard:first-child {
-  margin-top: 150px;
+  margin-top: 160px;
+}
+
+@media screen and (min-width: 941px) {
+  .profileCard:nth-child(2) {
+    margin-top: 160px;
+  }
+}
+@media screen and (min-width: 1389px) {
+  .profileCard:nth-child(3) {
+    margin-top: 160px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -478,6 +489,10 @@ li {
   background-color: var(--light-color);
   border-left: 10px solid var(--secondary-color);
   border-right: 10px solid var(--secondary-color);
+}
+
+.faqCard.faqCard--first {
+  margin-top: 0;
 }
 
 .faqCard__button {
