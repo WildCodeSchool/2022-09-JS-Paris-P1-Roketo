@@ -469,7 +469,7 @@ li {
 
 .faqCard {
   position: relative;
-  padding: 15px 20px;
+  padding: 20px;
   margin-top: 20px;
   border-radius: var(--border-radius);
   background-color: var(--light-color);
@@ -479,27 +479,35 @@ li {
 
 .faqCard__button {
   position: absolute;
+  text-align: center;
   content: "";
   z-index: 1;
   top: 12px;
   right: 24px;
-  /*
-  width: 20px;
-  height: 20px;
-  */
-  width: 1px;
-  height: 1px;
-  padding: 9px;
+  border: none;
+  padding: 5px;
+  width: 34px;
+  height: 34px;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.faqCard__buttonArrow {
+  display: inline-block;
   border-right: 4px solid var(--dark-color);
   border-top: 4px solid var(--dark-color);
   rotate: 135deg;
   transition: 0.3s;
-  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  user-select: none;
 }
 
-.faqCard__button.active {
-    top: 19px;
+.faqCard__button.active{
+  top: 20px;
+}
+
+.faqCard__button.active .faqCard__buttonArrow {
     border-right: 4px solid var(--secondary-color);
     border-top: 4px solid var(--secondary-color);
     rotate: 315deg;
@@ -508,23 +516,20 @@ li {
 
 .faqCard__question {
     margin: 0;
-    padding-bottom: 20px;
     font-size: 1rem;
     font-family: var(--text-font);
     padding-right: 40px;
 }
 
 .faqCard__answer {
-    margin: 10px 0 0 0;
+    margin: 20px 0 0 0;
     padding-top: 20px;
     border-top: 1px solid var(--dark-color);
-    /*opacity: 0;*/
     display: none;
 }
 
 .faqCard__answer.open {
   font-family: var(--text-font);
-  /*opacity: 100;*/
   display: block;
 }
 
