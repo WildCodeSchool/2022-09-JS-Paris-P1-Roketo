@@ -321,7 +321,7 @@ li {
 
 @media screen and (min-width: 768px) {
   .mainCol2 {
-    max-width: 1200 px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 20px;
   }
