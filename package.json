@@ -1,0 +1,25 @@
+{
+  "name": "2022-09-js-paris-p1-roketo",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "validate": "w3c-html-validator *.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildCodeSchool/2022-09-JS-Paris-P1-Roketo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WildCodeSchool/2022-09-JS-Paris-P1-Roketo/issues"
+  },
+  "homepage": "https://github.com/WildCodeSchool/2022-09-JS-Paris-P1-Roketo#readme",
+  "devDependencies": {
+    "w3c-html-validator": "^1.1.3"
+  }
+}
