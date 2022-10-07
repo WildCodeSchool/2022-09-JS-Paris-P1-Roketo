@@ -72,10 +72,10 @@ activePage();
 
 /* animation background */
 
-
 const bubblesContainer = document.querySelector("#bubbles");
-// Generate 100 bubbles with random duration style
-for (let i = 0; i < 130; i++) {
+const numbBubbles = (screen.width / 13);
+// Generate an amount of bubbles according to device width with random duration style
+for (let i = 0; i < numbBubbles; i++) {
     // Generate a random number between 5 and 15 included for duration style
     const bubbleDuration = Math.random() * (15 - 5) + 5;
     const bubble = document.createElement("span");
