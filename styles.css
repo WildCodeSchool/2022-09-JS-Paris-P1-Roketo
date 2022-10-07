@@ -108,6 +108,7 @@ li {
   left: 15px;
   padding: 1rem;
   z-index: 90;
+  user-select: none;
 }
 
 .burgerIcon div {
@@ -213,8 +214,10 @@ li {
 .titleTypeMain {
   font-family: var(--title-font);
   font-weight: 700;
-  font-size: 6rem;
+  font-size: 7rem;
   color: var(--light-color);
+  line-height: 1;
+  margin: 20px 0 0 0;
 }
 
 /* Titre principal de pages */
@@ -224,14 +227,16 @@ li {
   font-size: 4rem;
   color: var(--primary-color);
   text-align: center;
+  margin: 70px 0 30px;
 }
 
-/* Sous titre */
+/* Titre secondaire de pages */
 .titleTypeSub {
   font-family: var(--title-font);
   font-weight: 700;
   font-size: 2rem;
   color: var(--primary-color);
+  margin: 40px 0 20px;
 }
 
 /* Block type */
@@ -245,7 +250,8 @@ li {
 .animatedBG {
   position: absolute;
   width: 100%;
-  height: 200vh;
+  min-height: 140vh;
+  height: 100%;
   overflow: hidden;
   background-color: var(--dark-color);
   z-index: -1;
@@ -253,13 +259,10 @@ li {
 }
 
 #bubbles {
-  /*position: relative;*/
   display: flex;
 }
 
 #bubbles span {
-  /*default white*/
-  /*position: relative;*/
   width: 5px;
   height: 5px;
   background-color: var(--light-color);
@@ -268,9 +271,8 @@ li {
   box-shadow: 0 0 0 2px RGBA(250, 253, 245, 0.4),
     0 0 6px 3px RGBA(250, 253, 245, 0.4), 0 0 10px 6px RGBA(250, 253, 245, 0.4);
   animation: animate 15s linear infinite;
+  /*generation js animation-duration: entre 5 et 15s. default value : */
   animation-duration: 15s;
-  /*default value*/
-  /*generation js animation-duration: entre 5 et 15s*/
 }
 
 #bubbles span:nth-child(even) {
@@ -327,29 +329,30 @@ li {
 
 /* home page */
 .homePage__block {
+  margin-top: calc(50vh - 200px);
   text-align: center;
-}
-
-.homePage__title,
-.homePage__titleText,
-.homePage__subTitle {
-  margin: 0;
-}
-
-.homePage__titleLogo {
-  max-width: 100%;
-}
-
-.homePage__titleText {
   line-height: 1;
 }
 
+@media screen and (min-width: 768px) {
+  .homePage__block {
+    margin-top: calc(50vh - 290px);
+  }
+}
+
+.homePage .titleTypePage{
+  margin: 0;
+}
+
+.homePage__logo {
+  max-width: 100%;
+}
+  
 /* fin home page */
 
 /* VICTOR page Hello */
 
 .description {
-  /*color: var(--light-color);*/
   margin: 0;
   padding: 20px;
   background-color: var(--light-color);
@@ -397,6 +400,10 @@ li {
   border-radius: var(--border-radius);
 }
 
+.profileCard:first-child {
+  margin-top: 150px;
+}
+
 @media screen and (min-width: 768px) {
   .profileCard {
     flex: 0 0 600px;
@@ -411,11 +418,6 @@ li {
   margin-left: -95px;
   width: 190px;
   border-radius: var(--border-radius);
-}
-
-@media screen and (min-width: 768px) {
-  .profilePic {
-  }
 }
 
 .membersName {
@@ -519,7 +521,7 @@ li {
     margin: 0;
     font-size: 1rem;
     font-family: var(--text-font);
-    padding-right: 40px;
+    padding-right: 50px;
 }
 
 .faqCard__answer {
